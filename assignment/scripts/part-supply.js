@@ -4,26 +4,31 @@ console.log('****** Part Supply *******');
 // your code does what you expect!
 
 // 1. Create a variable called 'partsNeeded' with a value of the number 40.
-console.log('1. Create partsNeeded:');
+let partsNeeded = 40;
+console.log('1. Create partsNeeded:', partsNeeded);
 
 
 // 2. Create a variable called 'supplyChanges' whose value is an array containing
 //    the following numbers: 3, 5, -6, 0, 7, 11.
-console.log('2. Create supplyChanges:');
+  let supplyChanges = [3, 5, -6, 0, 7, 11.];
+console.log('2. Create supplyChanges:', supplyChanges);
 
 
 // 3. Create a variable called 'secondItem' and assign it the value of the second
 //    item in the 'supplyChanges' array.
+   let secondItem = supplyChanges[1];
 console.log('3. Access the second value of supplyChanges:');
 
 
 // 4. The last value in the 'supplyChanges' array was added by mistake.
 //    Remove it from the array and store it inside a new variable called 'removedItem'.
-console.log('4. Remove the last value from supplyChanges:');
+       let removedItem = supplyChanges.pop();
+console.log('4. Remove the last value from supplyChanges:', );
 
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
-console.log('5. Add the value 25 into supplyChanges.');
+  supplyChanges.push (25);
+console.log('5. Add the value 25 into supplyChanges.pop()');
 
 
 // 6. Create three new variables named 'positives', 'negatives', and
@@ -33,7 +38,24 @@ console.log('5. Add the value 25 into supplyChanges.');
 //      - If the value is a positive number, push it into the 'positives' array.
 //      - If the value is a negative number, push it into the 'negatives' array.
 //      - If the value is a zero, push it into the 'zeroes' array.
+     let positives = [];
+     let negatives = [];
+      let zeroes =  [];
+      
 console.log('6. Looping through supplyChanges to populate arrays with positive, negative, and zero values:');
+
+for (let i = 0; i < supplyChanges.length; i++ ) {
+  let value = supplyChanges[i];
+   if (value > 0 ) {
+    positives.push (value);
+    
+   } else if (value < 0) {
+    negatives.push(value);
+
+   } else {
+    zeroes.push (value);
+   }
+}
 
 
 
