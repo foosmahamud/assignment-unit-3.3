@@ -10,25 +10,32 @@ console.log('1. Create partsNeeded:', partsNeeded);
 
 // 2. Create a variable called 'supplyChanges' whose value is an array containing
 //    the following numbers: 3, 5, -6, 0, 7, 11.
-  let supplyChanges = [3, 5, -6, 0, 7, 11.];
+  let supplyChanges = [3, 5, -6, 0, -9, -10, 7, 11];
 console.log('2. Create supplyChanges:', supplyChanges);
 
 
 // 3. Create a variable called 'secondItem' and assign it the value of the second
 //    item in the 'supplyChanges' array.
    let secondItem = supplyChanges[1];
-console.log('3. Access the second value of supplyChanges:');
+console.log('3. Access the second value of supplyChanges!',secondItem);
 
 
 // 4. The last value in the 'supplyChanges' array was added by mistake.
 //    Remove it from the array and store it inside a new variable called 'removedItem'.
+// .pop() removes the last value of any Array
        let removedItem = supplyChanges.pop();
-console.log('4. Remove the last value from supplyChanges:', );
-
+console.log('4. Remove the last value from supplyChanges!', removedItem);
+   console.log('supplyChanges without the last value', supplyChanges);
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
   supplyChanges.push (25);
-console.log('5. Add the value 25 into supplyChanges.pop()');
+console.log('5. Add the value 25 into supplyChanges.pop()', supplyChanges );
+
+
+ let nature = ['trees', 'vacation', 'rivers', 'lake'];
+    let lastItemRemoved = nature.pop();
+    console.log('removed last item', lastItemRemoved);
+    console.log('nature is ', nature, 'supply is ', supplyChanges);
 
 
 // 6. Create three new variables named 'positives', 'negatives', and
@@ -43,7 +50,7 @@ console.log('5. Add the value 25 into supplyChanges.pop()');
       let zeroes =  [];
       
 console.log('6. Looping through supplyChanges to populate arrays with positive, negative, and zero values:');
-
+ 
 for (let i = 0; i < supplyChanges.length; i++ ) {
   let value = supplyChanges[i];
    if (value > 0 ) {
@@ -51,12 +58,16 @@ for (let i = 0; i < supplyChanges.length; i++ ) {
     
    } else if (value < 0) {
     negatives.push(value);
+    
 
    } else {
     zeroes.push (value);
+    console.log('zeroes array is', zeroes);
+
    }
 }
-
+console.log('positives array is', positives);
+console.log('negatives array is', negatives);
 
 
 
